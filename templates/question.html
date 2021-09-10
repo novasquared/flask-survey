@@ -6,12 +6,12 @@
 <p>{{ msg }}</p>
 {% endfor %}
 
-<h1>{{ question }}</h1>
+<h1>{{ question.question }}</h1>
 
 <form action="/answer" method="POST">
 
   <!-- you should have one item like this for every choice -->
-  {% for choice in choices %}
+  {% for choice in question.choices %}
   <p>
     <input 
       type="radio" 
